@@ -1,0 +1,92 @@
+PARA ESSE PROJETO
+
+- foi criado um projeto novo no firebase:
+https://console.firebase.google.com/?hl=pt
+
+biblioteca firebase:
+https://rnfirebase.io/
+yarn add @react-native-firebase/app
+
+Generating Android credentials:
+nome do pacote do seu app em em:
+android/app/src/main/AndroidManifest - ( package="com.devpost" )
+
+agora no firebase clica no android / e no Nome do pacote do Android coloca o seu:
+com.devpost / depois só clicar em registrar.
+
+agora baixa o arquivo .json, e coloca aqui em:
+android/app/ arquivo baixado.
+
+agora configurar / Configure Firebase with Android credentials:
+em android/build.gradle, coloca o: classpath 'com.google.gms:google-services:4.3.10'
+buildscript {
+  dependencies {
+    // ... other dependencies
+    classpath 'com.google.gms:google-services:4.3.10'
+    // Add me --- /\
+  }
+}
+agora em /android/app/build.gradle:
+apply plugin: 'com.google.gms.google-services' // <- Add this line
+
+
+Authentication Installation
+yarn add @react-native-firebase/auth
+
+Cloud Firestore - banco de dados utilizado nesse projeto
+yarn add @react-native-firebase/firestore
+
+Cloud Storage - para o envio de imagens e arquivos
+yarn add @react-native-firebase/storage
+
+_______________________________
+NAVEGAÇÕES:
+yarn add @react-navigation/native
+
+bibliotecas que o react native navigation precisa
+yarn add react-native-screens react-native-safe-area-context
+
+
+//navigation STACK 
+yarn add @react-navigation/stack
+yarn add react-native-gesture-handler
+yarn add @react-native-masked-view/masked-view
+
+
+yarn add @react-navigation/bottom-tabs
+
+_______________________________
+
+yarn add @react-native-community/async-storage
+_______________________________
+
+data base utlizado foi o Cloud Storage
+
+_____________________________________
+
+yarn add react-native-responsive-fontsize
+____________________________________________
+ICONS :
+https://github.com/oblador/react-native-vector-icons#installation
+
+yarn add react-native-vector-icons
+react-native link react-native-vector-icons
+
+android/app/build.gradle :
+​project.ext.vectoricons = [
+    iconFontNames: [ 'AntDesign.ttf', 'Feather.ttf', 'Ionicons.ttf', 'Entypo.ttf', 'MaterialCommunityIcons.ttf' ] // Name of the font files you want to copy
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+______________________________________________
+
+Animando icons da tab-bottoms
+
+yarn add lottie-react-native
+
+baixar animações
+https://lottiefiles.com/
+
+//lembrando se o app ficar fechando o problema é no json baixado que está bugado
+
+_________________
